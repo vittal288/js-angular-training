@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li *ngFor="let item of menuItems" class="list-group-item">
+        <!-- <a href="{{item.link}}" (click)="onMenuItemClick($event)">{{item.name}}</a> -->
+        <span (click)="onMenuItemClick(item)">{{item.name}}</span>
+      </li>
+    </ul>
+  </div>
+</div>

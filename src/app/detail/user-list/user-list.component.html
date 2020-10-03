@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-12">
+    <!-- <app-template-driven-form></app-template-driven-form>
+    <app-reactive-from></app-reactive-from> -->
+  </div>
+  <div class="col-md-12">
+    <h3>List of Users</h3>
+    <div class="panel panel-default">
+      <div class="alert alert-danger" role="alert" *ngIf="showError">
+        <span>Something went wrong, please try after sometime </span>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <th *ngFor="let colName of tableColumns">{{colName}}</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of appService.usersList">
+            <td>{{data.id}}</td>
+            <td>{{data.first_name | uppercase}}</td>
+            <td>{{data.last_name | reverse:'2, 3'}}</td>
+            <td>{{data.email}}</td>
+            <td><img class="profilce-pic" src="{{data.avatar}}" alt="profile" /></td>
+            <td>{{data.DOB | date : "MM/dd/yy"}}</td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" aria-label="Left Align"
+                (click)="onDeleteUser(data.id)">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

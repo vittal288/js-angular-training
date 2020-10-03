@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <title>Javascript Training</title>
+    <!--INLINE STYLE -->
+    <!-- <script>
+        console.log('THIS IS WRITTEN IN INLINE CODE');
+        var a =1;
+        var b = 3;
+        var sum = a+b;
+        console.log('SUM is', sum);
+    </script> -->
+    <script src="./my-lib.js" defer></script>
+    <script src="./src/common/util/util.js"></script>
+    <script src="./script.js" defer></script>
+    <script src="./test.js"></script>
+    <link rel="stylesheet" href="./style.css"/>
+    <style>
+        .signIn{
+            background-color: #acacac;
+            border: 1px solid #000;
+            color: #000;
+        }
+        .signIn:hover{
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        a{
+            background-color: #acacac;
+            padding: 10px;
+            color:#fff;
+            border: 1px solid black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body >
+    <input type="button" value="PRINT THIS PAGE" onclick="printThis()"/>
+    <h1>Welcome to JS training</h1>
+    <button onclick="onButtonClick()" onmouseover="onMouseHoverOnBtn()" onmouseout="onMouseOUtEvnt()">LOGIN</button>
+
+    <button id="logOutBtn">LOGOUT</button>
+    <button class="signIn">SIGN IN</button>
+
+    <div class="parent">PARENT
+        <div class="child-1">
+            CHILD 1
+        </div>
+        <div class="child-2">
+            CHILD 2 
+        </div>
+    </div>
+
+    <!-- <button onclick="deleteSession('userInfo')">DELETE SESSION </button>
+    <button onclick="onClickSetSesssion()">SET SESSION </button>
+    <button onclick="onClickSetLocalStorage()">SET LOCALSTORAGE  </button>
+    <button onclick="deleteLocalSt('userInfo')">DELETE LOCALSTORAGE  </button>
+    <button onclick="readMyInfo()">READ INFO  </button> -->
+    <!-- <button onclick="redirectToPage()">GO TO ADMIN PAGE</button> -->
+    <button onclick="refreshPage()">REFRESH</button>
+
+    <a href="https://www.google.com/" target="_parent">Load a Page</a>
+
+    <hr>
+    <hr>
+    <hr>
+    <div>
+        <button onclick="openAlertBox()">OPEN ALERT</button>
+        <button onclick="openConfirmationBox()">OPEN Confirmation</button>
+        <button onclick="openPromptBox()">OPEN Prompt</button>
+    </div>
+    
+   
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div id="table-Holder">
+
+    </div>
+
+    <button id="tempBtn" >EXEC</button>
+
+
+    <div id="butttonCntr"></div>
+
+    <button onclick="someFunctionName()">CALL ES6 Fn</button>
+</body>
+</html>

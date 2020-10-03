@@ -11,7 +11,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-    }).compileComponents();
+    }).compileComponents()
   }));
 
   it('should create the app', () => {
@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'sample-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('sample-app');
+    expect(app.title).toEqual('Angular training 123');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to sample-app!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Angular training 123');
   });
 });

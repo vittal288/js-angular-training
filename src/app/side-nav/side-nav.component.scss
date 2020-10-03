@@ -1,0 +1,9 @@
+.nav-items{
+  li span{
+    cursor: pointer;
+  }
+  li span:hover{
+    text-decoration: underline;
+    color: blue;
+  }
+}

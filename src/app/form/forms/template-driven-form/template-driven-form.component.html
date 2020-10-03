@@ -1,0 +1,54 @@
+<h3>Add User With Template Driven Form</h3>
+<form #f="ngForm" class="form-horizontal" (ngSubmit)="createUserFormSubmit(f)">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">First Name</label>
+    <div class="col-sm-10">
+      <input
+        name="firstName"
+        #firstName="ngModel"
+        type="text"
+        class="form-control"
+        id="firstName"
+        ngModel
+        placeholder="First Name"
+        required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="last name" class="col-sm-2 control-label">Last Name</label>
+    <div class="col-sm-10">
+      <input
+        name="lastName"
+        type="text"
+        class="form-control"
+        id="lastName"
+        ngModel
+        #lastName="ngModel"
+        placeholder="Last Name"
+        required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="last name" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input
+        name="email"
+        ngModel
+        #email="ngModel"
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Email"
+        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+        required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="!f.valid">Save</button>
+    </div>
+  </div>
+</form>
